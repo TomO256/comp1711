@@ -1,0 +1,122 @@
+    1  gitstatus
+    2  git status
+    3  git add R
+    4  git add README.md 
+    5  git status
+    6  git commit
+    7  git push
+    8  git log
+    9  clear
+   10  history
+   11  clear
+   12  ls
+   13  dir
+   14  ls -a
+   15  ls -l
+   16  touch tom.m
+   17  rm tom.m
+   18  touch tom.md
+   19  echo "My name is Tom" > touch.md
+   20  rm touch.md
+   21  echo "My name is Tom" > tom.md
+   22  git add tom.md
+   23  mkdir newDir
+   24  ls -l
+   25  pwd
+   26  cd newDir/
+   27  pwd
+   28  cde
+   29  cd
+   30  dir
+   31  cd java
+   32  dir
+   33  cd current
+   34  cd
+   35  cd java/current
+   36  dir
+   37  cd
+   38  cd nvm
+   39  dir
+   40  cd
+   41  cd workspaces
+   42  mkdir example1
+   43  mkdir example2
+   44  cd example2
+   45  mkdir example4
+   46  cd example4/
+   47  touch file3.txt
+   48  cd ..
+   49  touch file2.txt
+   50  cd ..
+   51  mkdir example3
+   52  touch file1.txt
+   53  tree
+   54  rm -r example1
+   55  rm -r example*
+   56  tree
+   57  cd Week1
+   58  mkdir Week1
+   59  mv file1.txt Week1
+   60  mv newFolder Week1
+   61  mv tom.md Week1
+   62  ls 
+   63  mv week1data.zip Week1
+   64  cd Week1
+   65  mkdir Lesson2
+   66  mv week1data.zip Lesson2
+   67  cd Lesson2/
+   68  unzip week1data.zip 
+   69  ls
+   70  rm week1data.zip 
+   71  cat data1.txt
+   72  cat data2.txt 
+   73  cat data1.txt data2.txt 
+   74  cat data*
+   75  cat *.txt
+   76  cat +.txt
+   77  cat *.txt
+   78  cat *.txt > newFile
+   79  rm newFile 
+   80  cat *.txt > newFile.txt
+   81  ls -a
+   82  cd ..
+   83  ls -l
+   84  ls
+   85  mkdir
+   86  Lesson1
+   87  mkdir Lesson1
+   88  mv file1.txt Lesson1
+   89  mv newFolder Lesson1
+   90  mv tom.md Lesson1
+   91  dir
+   92  cd Lesson
+   93  cd Lesson2
+   94  grep "Culture" *.txt
+   95  rm newFile.txt
+   96  ls -l
+   97  grep "Club" *.txt
+   98  grep "ABBA" *.txt | cut -d "," -f 3,4 
+   99  grep "Abba" *.txt | cut -d "," -f 3,4 
+  100  grep "Abba" *.txt | cut -d "," -f 1-4 
+  101  cat *.txt | head 25
+  102  cat *.txt | head -n 25
+  103  cat *.txt | head -n 42 | tail -n 1
+  104  grep "Eminem" *.txt
+  105  grep "1992" *.txt 
+  106  grep "1970" *.txt | sort 
+  107  grep "200" *.txt > naughties.txt
+  108  cat naughties.txt 
+  109  grep ",200" *.txt > naughties.txt 
+  110  rm naughties.txt 
+  111  grep ",200" *.txt > naughties.txt 
+  112  cat naughties.txt 
+  113  grep ",200"+[0-9] *.txt
+  114  grep ",2000"
+  115  cat *.txt |head -n 42 | head -n -1
+  116  man grep
+  117  cut -d "," *.txt
+  118  grep ",200[0-9]" data*.txt > naughties.txt
+  119  cat naughties.txt 
+  120  history
+  121  history > notes.txt
+  122  history > history.txt
