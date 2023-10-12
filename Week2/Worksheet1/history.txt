@@ -1,0 +1,141 @@
+    1  gitstatus
+    2  git status
+    3  git add R
+    4  git add README.md 
+    5  git status
+    6  git commit
+    7  git push
+    8  git log
+    9  clear
+   10  history
+   11  clear
+   12  ls
+   13  dir
+   14  ls -a
+   15  ls -l
+   16  touch tom.m
+   17  rm tom.m
+   18  touch tom.md
+   19  echo "My name is Tom" > touch.md
+   20  rm touch.md
+   21  echo "My name is Tom" > tom.md
+   22  git add tom.md
+   23  mkdir newDir
+   24  ls -l
+   25  pwd
+   26  cd newDir/
+   27  pwd
+   28  cde
+   29  cd
+   30  dir
+   31  cd java
+   32  dir
+   33  cd current
+   34  cd
+   35  cd java/current
+   36  dir
+   37  cd
+   38  cd nvm
+   39  dir
+   40  cd
+   41  cd workspaces
+   42  ls
+   43  mkdir Week2
+   44  cd Week2
+   45  touch notes.md
+   46  code first.c
+   47  gcc first.c -o first
+   48  ls -l
+   49  first
+   50  bash first
+   51  ./first
+   52  gcc first.c -o first
+   53  ./first
+   54  touch second.c
+   55  gcc second.c -o second
+   56  ./second
+   57  gcc second.c -o second
+   58  ./second
+   59  gcc second.c -o second
+   60  touch third.c
+   61  gcc third -o third
+   62  gcc third.c -o third
+   63  ./third
+   64  gcc third.c -o third
+   65  2**16
+   66  ./third
+   67  touch fourth.c
+   68  gcc third.c -o third
+   69  gcc fourth.c -o fourth
+   70  ./fourth
+   71  gcc fourth.c -o fourth
+   72  ./fourth
+   73  gcc fourth.c -o fourth
+   74  ./fourth
+   75  gcc fourth.c -o fourth]
+   76  ./fourth
+   77  gcc fourth.c -o fourth
+   78  ./fourth
+   79  touch rectangle.c
+   80  gcc rectangle.c
+   81  gcc rectangle.c -o rectangle
+   82  ./rectangle
+   83  gcc rectangle.c -o rectangle
+   84  ./rectangle
+   85  gcc rectangle.c -o rectangle
+   86  ./rectangle
+   87  gcc rectangle.c -o rectangle
+   88  ./rectangle
+   89  mkdir Worksheet 1
+   90  cd Worksheet 1
+   91  cd Worksheet/
+   92  cd ..
+   93  rm 1
+   94  rm -r 1
+   95  rm -r Worksheet/
+   96  mkdir Worksheet1
+   97  cd Worksheet1/
+   98  code Exercise1.c
+   99  gcc Exercise1.c -o Exercise1
+  100  ./Exercise1
+  101  gcc Exercise1.c -o Exercise1
+  102  ./Exercise1
+  103  gcc Exercise1.c -o Exercise1
+  104  ./Exercise1
+  105  code Exercise2.c
+  106  gcc Exercise2.c -o Exercise
+  107  gcc Exercise2.c -o Exercise2
+  108  ./Exercise2
+  109  gcc Exercise2.c -o Exercise2
+  110  ./Exercise2
+  111  gcc Exercise2.c -o Exercise2
+  112  ./Exercise2
+  113  gcc Exercise2.c -o Exercise2
+  114  ./Exercise2
+  115  code Exercise3.c
+  116  gcc Exercise3.c -o Exercise3
+  117  gcc Exercise3.c
+  118  rm a.out
+  119  gcc Exercise3.c -o Exercise3
+  120  ./Exercise3
+  121  gcc Exercise3.c -o Exercise3
+  122  ./Exercise3
+  123  gcc Exercise3.c -o Exercise3
+  124  ./Exercise3
+  125  gcc Exercise3.c -o Exercise3
+  126  ./Exercise3
+  127  clear
+  128  code Exercise4.c
+  129  gcc Exercise4.c -o Exercise4
+  130  code Exercise4.c
+  131  gcc Exercise4.c -o Exercise4
+  132  code Exercise4.c
+  133  gcc Exercise4.c -o Exercise4
+  134  code Exercise4.c
+  135  gcc Exercise4.c -o Exercise4
+  136  ./Exercise4
+  137  git add -A
+  138  git commit -m "C Bootcamp Session 1"
+  139  git push
+  140  clear
+  141  history > history.txt
