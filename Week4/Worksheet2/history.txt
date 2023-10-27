@@ -1,0 +1,90 @@
+    1  gitstatus
+    2  git status
+    3  git add R
+    4  git add README.md 
+    5  git status
+    6  git commit
+    7  git push
+    8  git log
+    9  clear
+   10  history
+   11  clear
+   12  ls
+   13  dir
+   14  ls -a
+   15  ls -l
+   16  touch tom.m
+   17  rm tom.m
+   18  touch tom.md
+   19  echo "My name is Tom" > touch.md
+   20  rm touch.md
+   21  echo "My name is Tom" > tom.md
+   22  git add tom.md
+   23  mkdir newDir
+   24  ls -l
+   25  pwd
+   26  cd newDir/
+   27  pwd
+   28  cde
+   29  cd
+   30  dir
+   31  cd java
+   32  dir
+   33  cd current
+   34  cd
+   35  cd java/current
+   36  dir
+   37  cd
+   38  cd nvm
+   39  dir
+   40  cd
+   41  cd workspaces
+   42  cd Week4
+   43  dir
+   44  cd MyExamples/
+   45  code ExampleStruct.c
+   46  gcc ExampleStruct.c -o ExampleStruct
+   47  ./ExampleStruct 
+   48  gcc ExampleStruct.c -o ExampleStruct
+   49  ./ExampleStruct 
+   50  gcc ExampleStruct.c -o ExampleStruct
+   51  ./ExampleStruct 
+   52  gcc ExampleStruct.c -o ExampleStruct
+   53  ./ExampleStruct 
+   54  gcc ExampleStruct.c -o ExampleStruct
+   55  git add ExampleStruct.c 
+   56  cd ..
+   57  mkdir Worksheet2
+   58  cd Worksheet2
+   59  code Exercise1.c
+   60  man rand
+   61  gcc Exercise1.c -o Exercise1
+   62  ./Exercise1 
+   63  gcc Exercise1.c -o Exercise1
+   64  ./Exercise1 
+   65  gcc Exercise1.c -o Exercise1
+   66  ./Exercise1 
+   67  man rand
+   68  valgrind ./Exercise1 
+   69  gcc Exercise1.c -o Exercise1
+   70  valgrind ./Exercise1 
+   71  gcc Exercise1.c -o Exercise1
+   72  valgrind ./Exercise1 
+   73  gcc ./Exercise1
+   74  ls
+   75  gcc Exercise1.c -o Exercise1 -g
+   76  gcc ./Exercise1
+   77  gcc Exercise1.c -o Exercise1 -g
+   78  ./Exercise1 
+   79  gdb ./Exercise1
+   80  valgrind ./Exercise1 
+   81  history
+   82  history >history2.txt
+   83  code Exercise2.c
+   84  git add -A
+   85  git push -m "Bootcamp 5 Classwork"]#
+   86  git push -m "Bootcamp 5 Classwork"
+   87  git commit -m "Bootcamp 5 Classwork"
+   88  git push
+   89  clear
+   90  history > history.txt
