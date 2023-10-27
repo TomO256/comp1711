@@ -1,0 +1,42 @@
+    1  gitstatus
+    2  git status
+    3  git add R
+    4  git add README.md 
+    5  git status
+    6  git commit
+    7  git push
+    8  git log
+    9  clear
+   10  history
+   11  clear
+   12  ls
+   13  dir
+   14  ls -a
+   15  ls -l
+   16  touch tom.m
+   17  rm tom.m
+   18  touch tom.md
+   19  echo "My name is Tom" > touch.md
+   20  rm touch.md
+   21  echo "My name is Tom" > tom.md
+   22  git add tom.md
+   23  mkdir newDir
+   24  ls -l
+   25  pwd
+   26  cd newDir/
+   27  pwd
+   28  cde
+   29  cd
+   30  dir
+   31  cd java
+   32  dir
+   33  cd current
+   34  cd
+   35  cd java/current
+   36  dir
+   37  cd
+   38  cd nvm
+   39  dir
+   40  cd
+   41  cd workspaces
+   42  history > history.txt
