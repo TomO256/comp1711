@@ -46,7 +46,7 @@ void tokeniseRecord(const char *input, const char *delimiter,
 // Complete the main function
 int main()
 {
-    char *filename = "FitnessData_2023.csv";
+    char filename[50] = "FitnessData_2023.csv";
     int buffer_size = 1000;
     char line_buffer[buffer_size];
     FILE *file = fopen(filename, "r");
@@ -64,9 +64,7 @@ int main()
     printf("Number of records in file: %d\n", count);
     int i;
     FITNESS_DATA array;
-    char *date;
-    char *time;
-    char *steps;
+    char steps[10];
     file = fopen(filename, "r");
     char new_buffer[buffer_size];
     for (i = 0; i <= 2; i++)
