@@ -71,11 +71,51 @@ int countTotal(char *filename){
     fclose(file);
     return count;
 }
+char countMin(char *filename){
+    int i;
+    FITNESS_DATA array[100];
+    char steps[10];
+    int buffer_size = 1000, noRecords;
+    char line_buffer[buffer_size];
+    FILE *file = fopen(filename, "r");
+    file = fopen(filename, "r");
+    char new_buffer[buffer_size];
+    noRecords=countTotal(filename);
+    int minSteps=10000000;
+    char finalStr[40];
+    char date[20];char time[20];
+    for (i = 0; i <= noRecords; i++)
+    {
+        fgets(new_buffer, buffer_size, file);
+        tokeniseRecord(new_buffer, ",", array[i].date, array[i].time, steps);
+        array[i].steps=atoi(steps);
+        if ((array[i].steps)<minSteps){
+            minSteps=array[i].steps;
+            int z=0, b=0;
+            while (array[i].date[z] != '\0'){
+                finalStr[b]=array[i].date[z];
+                z++;
+                b++;
+            }
+            z=0;
+            finalStr[b]=' ';
+            b++;
+            while (array[i].time[z] != '\0'){
+                finalStr[b]=array[i].time[z];
+                z++;
+                b++;
+            }
+        }
+    }
+    fclose(file);
+    printf("Fewest steps: %s\n",finalStr);
+    return 0;
+}
 // Complete the main function
 char filename[50];
 int main() {
    displayMenu();
-   char choice[1];
+   char choice[1], minSteps[20];
    int total;
    scanf("%s",choice);
    switch (choice[0]){
@@ -96,7 +136,7 @@ int main() {
         break;
     case 'c':
     case 'C':
-        printf("Option C");
+        countMin(filename);
         break;
     case 'd':
     case 'D':
@@ -117,7 +157,7 @@ int main() {
         printf("Invalid choice. Try again\n");
    }
    main();
-
+   return 0;
 }
 
 
