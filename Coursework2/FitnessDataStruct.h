@@ -3,7 +3,6 @@
 #define FITNESS_DATA_STRUCT_H
 
 #include <stdio.h>
-
 // Define an appropriate struct
 typedef struct {
 	char date[11];

@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "typeinfo": "c",
-        "limits": "c"
+        "limits": "c",
+        "math.h": "c"
     }
 }

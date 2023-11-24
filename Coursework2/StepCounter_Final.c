@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
+
 #include "FitnessDataStruct.h"
 
 // Struct moved to header file
@@ -71,7 +73,7 @@ int countTotal(char *filename){
     fclose(file);
     return count;
 }
-char countMin(char *filename){
+char countMinMax(char *filename,int minMax){
     int i;
     FITNESS_DATA array[100];
     char steps[10];
@@ -82,15 +84,31 @@ char countMin(char *filename){
     char new_buffer[buffer_size];
     noRecords=countTotal(filename);
     int minSteps=10000000;
+    int maxSteps=0;
     char finalStr[40];
     char date[20];char time[20];
+    int valid;
     for (i = 0; i <= noRecords; i++)
     {
         fgets(new_buffer, buffer_size, file);
         tokeniseRecord(new_buffer, ",", array[i].date, array[i].time, steps);
         array[i].steps=atoi(steps);
-        if ((array[i].steps)<minSteps){
-            minSteps=array[i].steps;
+        if (minMax==1){
+            if ((array[i].steps)<minSteps){
+                minSteps=array[i].steps;
+                valid=1;
+            }else{
+                valid=0;
+            }
+        }else{
+            if ((array[i].steps)>maxSteps){
+                maxSteps=array[i].steps;
+                valid=1;
+            }else{
+                valid=0;
+            }
+        }
+        if (valid==1){
             int z=0, b=0;
             while (array[i].date[z] != '\0'){
                 finalStr[b]=array[i].date[z];
@@ -108,8 +126,33 @@ char countMin(char *filename){
         }
     }
     fclose(file);
-    printf("Fewest steps: %s\n",finalStr);
+    if (minMax==1){
+        printf("Fewest steps: %s\n",finalStr);
+    }else{
+        printf("Largest steps: %s\n",finalStr);
+    }
     return 0;
+}
+void calculateMean(char *filename){
+    int i, total=0;
+    FITNESS_DATA array[100];
+    char steps[10];
+    int buffer_size = 1000, noRecords;
+    char line_buffer[buffer_size];
+    FILE *file = fopen(filename, "r");
+    file = fopen(filename, "r");
+    char new_buffer[buffer_size];
+    noRecords=countTotal(filename);
+    for (i = 0; i <= noRecords; i++)
+    {
+        fgets(new_buffer, buffer_size, file);
+        tokeniseRecord(new_buffer, ",", array[i].date, array[i].time, steps);
+        array[i].steps=atoi(steps);
+        total+=array[i].steps;
+    }
+    float mean = total/noRecords;
+    printf("mean is: %f",mean);
+    printf("Mean step count: %.0f\n",mean);
 }
 // Complete the main function
 char filename[50];
@@ -136,15 +179,15 @@ int main() {
         break;
     case 'c':
     case 'C':
-        countMin(filename);
+        countMinMax(filename,1);
         break;
     case 'd':
     case 'D':
-        printf("Option D");
+        countMinMax(filename,0);
         break;
     case 'e':
     case 'E':
-        printf("Option E");
+        calculateMean(filename);
         break;
     case 'f':
     case 'F':
