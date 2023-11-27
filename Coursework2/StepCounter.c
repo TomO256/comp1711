@@ -189,7 +189,6 @@ void findPeriod(char *filenamer)
     char new_buffer[buffer_size];
     char start[30],end[30],finalStart[30],finalEnd[30];
     noRecords = countTotal(filenamer);
-    printf("%d",noRecords);
     for (i = 0; i < noRecords; i++)
     {
         fgets(new_buffer, buffer_size, file);
@@ -201,7 +200,7 @@ void findPeriod(char *filenamer)
             if (last==0){
                 start[0]='\0';
                 strcat(start,array[i].date);
-                //strcat(start,space);
+                strcat(start,space);
                 strcat(start,array[i].time);
                 last=1;
                 
@@ -231,9 +230,12 @@ void findPeriod(char *filenamer)
             curCount=0;
         }
     }
-    printf("%s\n",finalStart);
-    printf("%s\n",finalEnd);
-    printf("%s %s\n",finalStart,finalEnd);
+    int b=0;
+    printf("Longest period start: ");
+    for (b=0;b<=15;b++){
+        printf("%c",finalStart[b]);
+    }
+    printf("\nLongest period end: %s\n",finalEnd);
 }
 
 // Complete the main function
