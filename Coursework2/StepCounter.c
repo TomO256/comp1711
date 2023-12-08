@@ -63,6 +63,7 @@ int openFile(char *filename)
     }
     else
     {
+        fclose(file);
         return 1;
     }
 }
@@ -82,12 +83,11 @@ int countTotal(char *filename)
 char countMinMax(char *filename, int minMax)
 {
     int i;
-    FITNESS_DATA array[100];
+    FITNESS_DATA array[200];
     char steps[10];
     int buffer_size = 1000, noRecords;
     char line_buffer[buffer_size];
     FILE *file = fopen(filename, "r");
-    file = fopen(filename, "r");
     char new_buffer[buffer_size];
     noRecords = countTotal(filename);
     int minSteps = 10000000;
@@ -95,8 +95,9 @@ char countMinMax(char *filename, int minMax)
     char finalStr[40];
     char date[20];
     char time[20];
+    char space[]=" ";
     int valid;
-    for (i = 0; i <= noRecords; i++)
+    for (i = 0; i < noRecords; i++)
     {
         fgets(new_buffer, buffer_size, file);
         tokeniseRecord(new_buffer, ",", array[i].date, array[i].time, steps);
@@ -127,24 +128,12 @@ char countMinMax(char *filename, int minMax)
         }
         if (valid == 1)
         {
-            int z = 0, b = 0;
-            while (array[i].date[z] != '\0')
-            {
-                finalStr[b] = array[i].date[z];
-                z++;
-                b++;
-            }
-            z = 0;
-            finalStr[b] = ' ';
-            b++;
-            while (array[i].time[z] != '\0')
-            {
-                finalStr[b] = array[i].time[z];
-                z++;
-                b++;
+            finalStr[0]='\0';
+            strcat(finalStr,array[i].date);
+            strcat(finalStr,space);
+            strcat(finalStr,array[i].time);
             }
         }
-    }
     fclose(file);
     if (minMax == 1)
     {
@@ -158,34 +147,34 @@ char countMinMax(char *filename, int minMax)
 }
 void calculateMean(char *filename)
 {
-    int i, total = 0;
-    FITNESS_DATA array[100];
+    int i;
+    float total = 0;
+    FITNESS_DATA array[200];
     char steps[10];
     int buffer_size = 1000, noRecords;
     char line_buffer[buffer_size];
     FILE *file = fopen(filename, "r");
-    file = fopen(filename, "r");
     char new_buffer[buffer_size];
     noRecords = countTotal(filename);
-    for (i = 0; i <= noRecords; i++)
+    for (i = 0; i < noRecords; i++)
     {
         fgets(new_buffer, buffer_size, file);
         tokeniseRecord(new_buffer, ",", array[i].date, array[i].time, steps);
         array[i].steps = atoi(steps);
         total += array[i].steps;
     }
-    float mean = total / noRecords;
+    float mean = (float) total / (float) noRecords;
     printf("Mean step count: %.0f\n", mean);
+    fclose(file);
 }
 void findPeriod(char *filenamer)
 {
     int i,highCount=0,curCount,last=0;
-    FITNESS_DATA array[100];
+    FITNESS_DATA array[200];
     char steps[10];
     int buffer_size = 1000, noRecords;
     char line_buffer[buffer_size];
     FILE *file = fopen(filenamer, "r");
-    file = fopen(filenamer, "r");
     char new_buffer[buffer_size];
     char start[30],end[30],finalStart[30],finalEnd[30];
     noRecords = countTotal(filenamer);
@@ -212,16 +201,8 @@ void findPeriod(char *filenamer)
             }
 
             if (curCount>highCount){
-                int c=0;
-                while (start[c]!='\0'){
-                    finalStart[c]=start[c];
-                    c++;
-                }
-                c=0;
-                while (end[c]!='\0'){
-                    finalEnd[c]=end[c];
-                    c++;
-                }
+                strcpy(finalStart,start);
+                strcpy(finalEnd,end);
                 highCount=curCount;
                 
             }
@@ -231,6 +212,7 @@ void findPeriod(char *filenamer)
         }
     }
     int b=0;
+    fclose(file);
     printf("Longest period start: ");
     for (b=0;b<=15;b++){
         printf("%c",finalStart[b]);
@@ -243,7 +225,7 @@ char filename[50];
 int main()
 {
     displayMenu();
-    char choice[1], minSteps[20];
+    char choice[1];
     int total;
     scanf("%s", choice);
     switch (choice[0])
